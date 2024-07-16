@@ -1,3 +1,7 @@
+/* ---------------- */
+/* CSS Reset style */
+/* ---------------- */
+
 *,
 *::after,
 *::before {
@@ -6,37 +10,10 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* font size here */
-  --fs-900: 85px;
-  --fs-800: 45px;
-  --fs-700: 35px;
-  --fs-600: 30px;
-  --fs-500: 25px;
-  --fs-400: 20px;
-  --fs-300: 18px;
-
-  /* font weight */
-  --extrabold: 800;
-  --bold: 700;
-  --semilbold: 600;
-  --regular: 400;
-
-  /* font family */
-  --ff-open: "Open Sans", sans-serif;
-
-  /* color here */
-  --clr-dark1: rgba(24, 24, 24, 1);
-  --clr-dark2: rgba(71, 71, 71, 1);
-  --clr-dark3: rgba(117, 117, 117, 1);
-  --clr-whith: rgba(255, 255, 255, 1);
-  --clr-light: rgba(253, 110, 10, 1);
-}
-
 /* setup the body */
 body {
-  font-family: var(--ff-open);
-  font-size: var(--fs-300);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-500);
   font-weight: var(--regular);
   background-color: var(--clr-whith);
   color: var(--clr-dark1);
@@ -90,4 +67,244 @@ select,
 textarea {
   font: inherit;
   color: inherit;
+}
+
+/* ----------------- */
+/* CSS Conston Value */
+/* ----------------- */
+
+:root {
+  /* font size here */
+  --fs-900: clamp(1.75em, 4vw, 3.25rem);
+  --fs-800: clamp(1rem, 4vw, 2.375rem);
+  --fs-700: clamp(1rem, 4vw, 1.75rem);
+  --fs-600: clamp(1rem, 4vw, 1.5rem);
+  --fs-500: clamp(0.875rem, 4vw, 1rem);
+  --fs-400: 0.875rem;
+
+  /* font weight */
+  --bold: 700;
+  --semibold: 600;
+  --medium: 500;
+  --regular: 400;
+
+  /* font family */
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-inter: "Inter", sans-serif;
+  --ff-manrope: "Manrope", sans-serif;
+
+  /* color here */
+  --clr-dark1: rgba(0, 0, 0, 0.87);
+  --clr-dark2: rgba(58, 58, 58, 1);
+  --clr-dark3: rgba(117, 117, 117, 1);
+  --clr-dark4: rgba(10, 8, 38, 1);
+  --clr-dark5: rgba(120, 120, 133, 1);
+  --clr-dark6: rgba(108, 108, 108, 1);
+  --clr-whith: rgba(255, 255, 255, 1);
+  --clr-light: rgba(224, 44, 109, 1);
+}
+
+/* shared style  */
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.product-container {
+  max-width: 1047px;
+  margin: 0 auto;
+  border: 1px solid teal;
+}
+
+/* --------------------- */
+/* Utility fast approse */
+/* --------------------- */
+
+.flx {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/* Easy for font size style */
+
+.fs-1 {
+  font-size: var(--fs-900);
+}
+
+.fs-2 {
+  font-size: var(--fs-800);
+}
+
+.fs-3 {
+  font-size: var(--fs-700);
+}
+
+.fs-4 {
+  font-size: var(--fs-600);
+}
+
+.fs-5 {
+  font-size: var(--fs-500);
+}
+
+.fs-6 {
+  font-size: var(--fs-400);
+}
+
+/* Easy for font weight style */
+
+.fw-1 {
+  font-weight: var(--bold);
+}
+
+.fw-2 {
+  font-weight: var(--semibold);
+}
+
+.fw-3 {
+  font-weight: var(--medium);
+}
+
+.fw-4 {
+  font-weight: var(--regular);
+}
+
+/* Easy for work font family style */
+
+.ff-poppins {
+  font-family: var(--ff-poppins);
+}
+
+.ff-inter {
+  font-family: var(--ff-inter);
+}
+
+.ff-manrope {
+  font-family: var(--ff-manrope);
+}
+
+.btn-primary {
+  padding: 0.8rem 1.3rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: var(--clr-whith);
+  background-color: var(--clr-light);
+  border-radius: 41px;
+}
+
+/* Easy fon color style */
+
+.clr-1 {
+  color: var(--clr-dark1);
+}
+.clr-2 {
+  color: var(--clr-dark2);
+}
+.clr-3 {
+  color: var(--clr-dark3);
+}
+
+/* nav related style start */
+nav {
+  padding: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu--list {
+  --gap: 2.1rem;
+}
+
+.nav-menu--list2 {
+  display: none;
+}
+
+/* nav related style end */
+
+/* Hero related style start */
+#hero {
+  margin: 3rem 0;
+  align-items: center;
+}
+
+.hero-content-container {
+  max-width: 582px;
+  margin: 0 auto;
+}
+
+.hero-content-container > * + * {
+  margin-top: 1rem;
+}
+
+.hero-image-container {
+  max-width: 475px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-img-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* Hero related style end */
+/* --------------------- */
+/* Responsive style part */
+/* --------------------- */
+@media screen and (max-width: 576px) {
+  /* navigation style */
+  nav {
+    padding: 1rem 0;
+    flex-direction: row-reverse;
+  }
+  .nav-menu--list {
+    display: none;
+  }
+
+  .nav-menu--list2 {
+    display: none;
+  }
+
+  .hero-content-container {
+    text-align: center;
+  }
+
+  /* hero style */
+  #hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-image-container {
+    max-width: 257px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /* Navigation style */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Hero style */
+  #hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-content-container {
+    text-align: center;
+  }
+
+  .hero-image-container {
+    max-width: 357px;
+  }
 }
